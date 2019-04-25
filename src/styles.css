@@ -1,0 +1,68 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    'header header'
+    'aside main'
+    'footer footer';
+}
+header {
+  grid-area: header;
+}
+footer {
+  grid-area: footer;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  position: relative;
+}
+
+nav {
+  min-width: 200px;
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.Menu-item {
+  margin-top: 10px;
+}
+
+.Menu-item.is-current a {
+  font-weight: bold;
+  color: red;
+}
+
+.StickyHeader {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 1px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+article {
+  padding: 0 20px;
+}
+
+header,
+footer {
+  height: 100px;
+  text-align: center;
+  background-color: #ccc;
+  border-top: 1px solid #ccc;
+  font-size: 2em;
+}
